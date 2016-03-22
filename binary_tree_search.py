@@ -1,3 +1,5 @@
+from random import randint
+
 class Node:
 	def __init__(self, val):
 		self.value = val
@@ -87,9 +89,13 @@ class Tree:
 		print("InOrder")
 		self.root.inorder()
 
+
 bst = Tree()
-bst.insert(10)
-print(bst.insert(15))
+n = 1100
+for i in range(n):
+	bst.insert(randint(0,1200))
+
+#print(bst.insert(15))
 bst.preorder()
 bst.postorder()
 bst.inorder()
