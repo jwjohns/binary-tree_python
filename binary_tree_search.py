@@ -1,3 +1,4 @@
+import datetime
 from random import randint
 
 class Node:
@@ -91,11 +92,16 @@ class Tree:
 
 
 bst = Tree()
-n = 1100
+n = 10000
+start  = datetime.datetime.now()
 for i in range(n):
-	bst.insert(randint(0,1200))
-
+	bst.insert(randint(0,20000))
+finish = datetime.datetime.now()
+print (finish-start).microseconds
 #print(bst.insert(15))
-bst.preorder()
-bst.postorder()
+#bst.preorder()
+#bst.postorder()
+start = datetime.datetime.now()
 bst.inorder()
+finish = datetime.datetime.now()
+print (finish - start).seconds
