@@ -104,4 +104,4 @@ print (finish-start).microseconds
 start = datetime.datetime.now()
 bst.inorder()
 finish = datetime.datetime.now()
-print (finish - start).seconds
+print ((finish - start).microseconds % 1000)
